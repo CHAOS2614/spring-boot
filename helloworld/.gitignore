@@ -5,6 +5,3 @@
 # IntelliJ project files
 .idea
 target
-gen
-helloworld.iml
-pom.xml

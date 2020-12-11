@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 这个的父项目来真正管理Spring Boot应用里面的所有依赖版本 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,6 +17,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!-- spring-boot-start:spring-boot场景启动器，帮我们导入了web模块正常运行所依赖的组件。
+             Spring Boot将所有的功能场景都抽取出来，做成了一个个的starters（启动器），
+                只需要在项目中引入这些starter相关场景的所有依赖都会导入进来。
+                要用什么功能就导入什么场景的启动器。
+                -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

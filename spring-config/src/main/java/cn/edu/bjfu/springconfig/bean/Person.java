@@ -2,6 +2,7 @@ package cn.edu.bjfu.springconfig.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -10,12 +11,18 @@ import java.util.Map;
 
 /**
  * 将配置文件中配置的每一个属性的值，映射到这个组建中
- * <p>@ConfigurationProperties:告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定</p>
+ * <p>@ConfigurationProperties:告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定
+ *    prefix = "person":配置文件中哪个下面的所有属性进行一一映射
+ *
+ *    只有这个组件是容器中的组件，才能提供@ConfigurationProperties功能
+ *    默认从全局配置文件中获取值
+ *    可以使用@PropertySource指定配置文件进行获取属性值</p>
  * @author Chao Huaiyu
  * @date 2020/12/11
  */
-@Component
 @ConfigurationProperties(prefix = "person")
+@Component
+@PropertySource(value = {"classpath:person.properties"})
 public class Person {
 
     private String name;
@@ -97,3 +104,4 @@ public class Person {
                 '}';
     }
 }
+

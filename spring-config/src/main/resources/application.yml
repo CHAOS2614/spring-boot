@@ -1,15 +1,15 @@
-server:
-  port: 8081
-
-person:
-  name: anna
-  age: 17
-  sex: false
-  birthday: 2010/12/12
-  map: {k1: v1,k2: 12}
-  list:
-    - red
-    - blue
-  dog:
-    name: dog
-    age: 2
+#server:
+#  port: 8081
+#
+#person:
+#  name: anna
+#  age: 17
+#  sex: false
+#  birthday: 2010/12/12
+#  map: {k1: v1,k2: 12}
+#  list:
+#    - red
+#    - blue
+#  dog:
+#    name: dog
+#    age: 2

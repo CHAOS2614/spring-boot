@@ -1,5 +1,6 @@
 package cn.edu.bjfu.springconfig.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +24,7 @@ public class Person {
     private Date birthday;
     private Map<String,Object> map;
     private List<Object> list;
+
     private Dog dog;
 
     public String getName() {
@@ -77,6 +79,7 @@ public class Person {
         return dog;
     }
 
+    @Autowired
     public void setDog(Dog dog) {
         this.dog = dog;
     }

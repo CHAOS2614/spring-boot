@@ -1,16 +1,13 @@
-package cn.eud.bjfu.jdbc;
+package cn.edu.bjfu.springbootmybatis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author Chaos
- */
 @SpringBootApplication
-public class SpringBootDataJdbcApplication {
+public class SpringBootDataMybatisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDataJdbcApplication.class, args);
+        SpringApplication.run(SpringBootDataMybatisApplication.class, args);
     }
 
 }

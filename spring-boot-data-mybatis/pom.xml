@@ -8,10 +8,10 @@
         <version>2.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cn.eud.bjfu</groupId>
-    <artifactId>spring-boot-data-jdbc</artifactId>
+    <groupId>cn.edu.bjfu</groupId>
+    <artifactId>spring-boot-data-mybatis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-data-jdbc</name>
+    <name>spring-boot-data-mybatis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -27,6 +27,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.4</version>
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -38,14 +43,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.1.23</version>
-        </dependency>
-
     </dependencies>
 
     <build>

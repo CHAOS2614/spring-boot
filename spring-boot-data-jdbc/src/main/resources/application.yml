@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: chaos1022
+    url: jdbc:mysql://8.131.51.151:3306/jdbc
+    driver-class-name: com.mysql.jdbc.Driver

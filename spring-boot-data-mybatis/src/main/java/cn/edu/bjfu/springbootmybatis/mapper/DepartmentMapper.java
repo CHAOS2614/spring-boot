@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.*;
  * @author Chaos
  * @date 2020/12/15
  */
+@Mapper
 public interface DepartmentMapper {
 
     /**

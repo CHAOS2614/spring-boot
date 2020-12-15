@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>@MapperScan开启Mapper扫描，不用标注Mapper注解了</p>
  * @author chaos
  */
-@MapperScan(value = "cn.edu.bjfu.springbootmybatis.mapper")
 @SpringBootApplication
 public class SpringBootDataMybatisApplication {
 

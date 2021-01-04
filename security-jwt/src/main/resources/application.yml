@@ -1,0 +1,4 @@
+jwt:
+  header: jwt-token
+  secret: safhioeaf
+  expirarion: 864000

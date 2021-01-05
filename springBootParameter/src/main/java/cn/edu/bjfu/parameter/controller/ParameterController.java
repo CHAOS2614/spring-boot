@@ -1,5 +1,6 @@
 package cn.edu.bjfu.parameter.controller;
 
+import cn.edu.bjfu.parameter.entity.Person;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -85,5 +86,11 @@ public class ParameterController {
         map.put("brand",brand);
         System.out.println(path);
         return map;
+    }
+
+
+    @PostMapping("/person")
+    public String person(Person person){
+        return person.toString();
     }
 }

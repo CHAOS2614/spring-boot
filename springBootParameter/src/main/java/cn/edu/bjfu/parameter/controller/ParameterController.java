@@ -20,19 +20,19 @@ public class ParameterController {
      * <p>@RequestHeader获取请求头信息，可以使用Map获取所有请求头信息</p>
      */
     @GetMapping("/car/{id}/owner/{name}")
-    public Map<String,Object> getCar(@PathVariable("id") Integer id,
-                                     @PathVariable("name") String name,
-                                     @PathVariable Map<String,String> car,
-                                     @RequestHeader("User-Agent") String userAgent,
-                                     @RequestHeader Map<String,String> header){
+    public Map<String, Object> getCar(@PathVariable("id") Integer id,
+                                      @PathVariable("name") String name,
+                                      @PathVariable Map<String, String> car,
+                                      @RequestHeader("User-Agent") String userAgent,
+                                      @RequestHeader Map<String, String> header) {
 
-        Map<String,Object> map = new HashMap<>(16);
+        Map<String, Object> map = new HashMap<>(16);
 
-        map.put("id",id);
-        map.put("name",name);
-        map.put("car",car);
-        map.put("userAgent",userAgent);
-        map.put("head",header);
+        map.put("id", id);
+        map.put("name", name);
+        map.put("car", car);
+        map.put("userAgent", userAgent);
+        map.put("head", header);
 
         return map;
     }
@@ -42,18 +42,18 @@ public class ParameterController {
      * <p>@CookieValue获取Cookie信息，可以使用Cookie类型获取Cookie所有信息</p>
      */
     @GetMapping("/cat")
-    public Map<String,Object> getCat(@RequestParam("age") Integer age,
-                                     @RequestParam("inters")List<String> inters,
-                                     @RequestParam Map<String,String> cat,
-                                     @CookieValue("JSESSIONID") String sessionId,
-                                     @CookieValue("JSESSIONID") Cookie cookie){
+    public Map<String, Object> getCat(@RequestParam("age") Integer age,
+                                      @RequestParam("inters") List<String> inters,
+                                      @RequestParam Map<String, String> cat,
+                                      @CookieValue("JSESSIONID") String sessionId,
+                                      @CookieValue("JSESSIONID") Cookie cookie) {
 
-        Map<String,Object> map = new HashMap<>(16);
+        Map<String, Object> map = new HashMap<>(16);
 
-        map.put("age",age);
-        map.put("inters",inters);
-        map.put("cat",cat);
-        map.put("sessionId",sessionId);
+        map.put("age", age);
+        map.put("inters", inters);
+        map.put("cat", cat);
+        map.put("sessionId", sessionId);
 
         System.out.println(cookie);
 
@@ -64,9 +64,9 @@ public class ParameterController {
      * 获取请求体参数，全部参数为一个字符串
      */
     @PostMapping("/save")
-    public Map<String,Object> postParam(@RequestBody String content){
-        Map<String,Object> map = new HashMap<>(16);
-        map.put("content",content);
+    public Map<String, Object> postParam(@RequestBody String content) {
+        Map<String, Object> map = new HashMap<>(16);
+        map.put("content", content);
         return map;
     }
 
@@ -78,19 +78,22 @@ public class ParameterController {
      * <p>SpringBoot默认禁用矩阵变量功能</p>
      */
     @GetMapping("/cars/{path}")
-    public Map<String,Object> carsSell(@MatrixVariable Integer low,
-                                       @MatrixVariable List<String> brand,
-                                       @PathVariable String path){
-        Map<String,Object> map = new HashMap<>(16);
-        map.put("low",low);
-        map.put("brand",brand);
+    public Map<String, Object> carsSell(@MatrixVariable Integer low,
+                                        @MatrixVariable List<String> brand,
+                                        @PathVariable String path) {
+        Map<String, Object> map = new HashMap<>(16);
+        map.put("low", low);
+        map.put("brand", brand);
         System.out.println(path);
         return map;
     }
 
 
     @PostMapping("/person")
-    public String person(Person person){
+    public String person(Person person) {
+        if (1) {
+
+        }
         return person.toString();
     }
 }
